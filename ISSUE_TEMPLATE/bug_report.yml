@@ -1,0 +1,31 @@
+name: "Aviso de Bug"
+description: "Relatar um erro ou comportamento inesperado em um software"
+labels: ["bug", "triage"]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Comportamento Inesperado"
+      description: "Descreva o que aconteceu de errado e o que era esperado ocorrer."
+      placeholder: "Ao submeter o formulário sem preencher o campo X, o sistema retorna erro 500 em vez de validação de campo..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: "Passos para Reproduzir"
+      description: "Descreva o passo a passo exato para simular o erro."
+      placeholder: |
+        1. Acessar a tela '/solicitacoes'
+        2. Clicar no botão 'Nova Demanda'
+        3. Deixar o campo de telefone vazio e clicar em 'Salvar'
+        4. Notar erro no console: 'Uncaught TypeError'
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: "Ambiente / Navegador / SO"
+      placeholder: "Ex: Linux Ubuntu 22.04, Chrome 120, Node v18.17"
+    validations:
+      required: false

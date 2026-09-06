@@ -1,0 +1,37 @@
+name: "Nova Funcionalidade (Feature)"
+description: "Propor uma nova funcionalidade para um projeto existente"
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por contribuir com os projetos da LADES! Preencha as informações abaixo para contextualizar sua proposta.
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "Descrição da Funcionalidade"
+      description: "Explique de forma clara e concisa o que deve ser desenvolvido e qual problema isso resolve."
+      placeholder: "Como usuário, eu gostaria de poder exportar relatórios em PDF para facilitar..."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "Critérios de Aceite"
+      description: "O que precisa estar funcionando para esta funcionalidade ser considerada concluída?"
+      placeholder: |
+        - [ ] Botão de exportação visível apenas para administradores.
+        - [ ] Geração do arquivo no formato .pdf compatível com o padrão institucional.
+        - [ ] Testes unitários cobrindo o serviço de exportação.
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridade Estimada"
+      options:
+        - "Baixa (Nice to have)"
+        - "Média (Planejado para as próximas sprints)"
+        - "Alta (Essencial para o MVP/Release)"
+    validations:
+      required: true
